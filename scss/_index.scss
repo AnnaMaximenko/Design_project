@@ -1,0 +1,137 @@
+.section-1 {
+  margin-top: 59px;
+  padding-top: 206px;
+  height: 758px;
+  background-image: url(../pictures/index_section1.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  &__wrapper {
+    @include ColumnLeft(20px);
+    padding-left: 53px;
+  }
+  &__title {
+    color: $colorForHeader;
+    font-size: $fontSizeIndexTitle;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 81.25px */
+  }
+  &__text {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+  }
+  &__button {
+    height: 75px;
+    width: 19%;
+    border-radius: 18px;
+    border: 1px solid $colorForHeader;
+    @include lineCenter(12px);
+    background-color: $colorForHeader;
+  }
+  &__button:hover {
+    background-color: $colorForButtonHover;
+  }
+  &__btn-text {
+    color: $colorMainBackground;
+    text-align: center;
+    font-family: $fontFamilyAdditional;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 22.5px */
+    letter-spacing: 0.36px;
+  }
+}
+.section-2 {
+  @include ColumnCenter(0px);
+  padding-top: 100px;
+  margin-bottom: 96px;
+  &__title {
+    color: $colorForHeader;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 62.5px */
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  &__text {
+    color: $colorMainText;
+    text-align: center;
+    font-family: $fontFamilyAdditional;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+    margin-bottom: 93px;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 548px);
+    gap: 50px 106px;
+  }
+  &__img {
+    margin-bottom: 24px;
+  }
+  &__subtitle {
+    color: $colorForHeader;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+  }
+  &__text-cart {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+  }
+  &__wrapper {
+    @include lineSpaceBetween;
+  }
+}
+.counter {
+  padding-top: 151px;
+  padding-bottom: 151px;
+  background-color: $colorBackCounter;
+  @include lineSpaceAround(9%);
+  &__item {
+    @include ColumnCenter(16px);
+    position: relative;
+  }
+  &__item_line::after {
+    content: "";
+    background: $colorDigit;
+    width: 1.2px;
+    height: 130px;
+    top: 18px;
+    right: -80px;
+    position: absolute;
+  }
+  &__number {
+    color: $colorDigit;
+    font-size: $fontSizeNumber;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 106.25px */
+    letter-spacing: 1.7px;
+  }
+  &__text {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+  }
+}

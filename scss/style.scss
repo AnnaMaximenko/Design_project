@@ -1,0 +1,30 @@
+@import "../scss/vars";
+@import "../scss/mixin";
+@import "../scss/index";
+@import "../scss/header-footer";
+@import "../scss/articles&news";
+@import "../scss/banner";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamilyMain;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  list-style-type: none;
+}
+html {
+  font-size: $fontSizeMain;
+}
+
+.center {
+  padding-left: calc(50% - $siteWidth / 2);
+  padding-right: calc(50% - $siteWidth / 2);
+}

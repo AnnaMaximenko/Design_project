@@ -1,0 +1,106 @@
+.header {
+  @include lineSpaceBetween;
+  padding-top: $paddingHeaderTop;
+  &-left {
+    @include lineCenterLogo($gapLogoHeader);
+    &__text {
+      color: $colorForHeader;
+      font-size: $fontSizeLogo;
+      font-weight: 400;
+      line-height: 125%;
+    }
+  }
+  &-right {
+    @include lineCenter($gapMenuHeader);
+    &__menu {
+      color: $colorForHeader;
+      text-align: center;
+      font-family: $fontFamilyAdditional;
+      font-size: $fontSizeHeaderMenu;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+    }
+    &__menu:hover {
+      color: $colorForHeaderHover;
+    }
+  }
+}
+
+.footer {
+  padding-top: $paddingFooterTop;
+  @include lineFooter($gapMainFooter);
+
+  &-left {
+    &__logo {
+      @include lineLeft($gapLogoHeader);
+      margin-bottom: 18px;
+    }
+    &__textual {
+      color: $colorForHeader;
+      font-size: $fontSizeLogo;
+      font-weight: 400;
+      line-height: 125%;
+    }
+    &__text {
+      color: $colorMainText;
+      font-family: $fontFamilyAdditional;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 33px */
+      letter-spacing: 0.22px;
+      margin-bottom: 31px;
+    }
+    &__social {
+      @include lineLeft($gapSocial);
+      cursor: pointer;
+    }
+    &__social:hover path {
+      fill: $colorForButtonHover;
+    }
+  }
+  &-middle {
+    @include ColumnLeft($gapFooterMenu);
+    flex-grow: 1.7;
+    &__title {
+      color: $colorForHeader;
+      font-size: $fontSizeFooterMenuTitle;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 31.25px */
+    }
+    &__menu {
+      color: $colorMainText;
+      font-family: $fontFamilyAdditional;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 300%; /* 66px */
+      letter-spacing: 0.22px;
+    }
+    &__menu:hover {
+      color: $colorForHeaderHover;
+    }
+  }
+  &-right {
+    @include ColumnLeft($gapFooterContact);
+    &__title {
+      color: $colorForHeader;
+      font-size: $fontSizeFooterMenuTitle;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 31.25px */
+    }
+    &__contact {
+      color: $colorMainText;
+      font-family: $fontFamilyAdditional;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 33px */
+      letter-spacing: 0.22px;
+      cursor: pointer;
+    }
+    &__contact:hover {
+      color: $colorForHeaderHover;
+    }
+  }
+}
