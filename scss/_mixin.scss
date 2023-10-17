@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: space-between;
 }
+@mixin lineSpaceBetweenUp() {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 @mixin line($gap) {
   display: flex;
   align-items: normal;

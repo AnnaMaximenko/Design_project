@@ -28,7 +28,7 @@
 }
 
 .footer {
-  padding-top: $paddingFooterTop;
+  // padding-top: $paddingFooterTop;
   @include lineFooter($gapMainFooter);
 
   &-left {
