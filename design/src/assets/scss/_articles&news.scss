@@ -1,0 +1,189 @@
+.articleAndNews {
+  margin-bottom: 96px;
+  &__title-left {
+    color: $colorForHeader;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 62.5px */
+    letter-spacing: 1px;
+    align-items: left;
+  }
+  @include ColumnLeft(30px);
+  padding-top: 148px;
+  &__title {
+    color: $colorForHeader;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 62.5px */
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  &__text {
+    color: $colorMainText;
+    text-align: center;
+    font-family: $fontFamilyAdditional;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+    margin-bottom: 52px;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(383px, 1fr));
+    gap: 28px;
+  }
+  &__cart {
+    border: 1px solid $colorBorder;
+    border-radius: 62px;
+    padding: 21px;
+    cursor: pointer;
+    position: relative;
+  }
+  &__cart:hover {
+    background-color: $colorBackCounter;
+  }
+  &__cart:hover circle {
+    fill: $colorMainBackground;
+  }
+
+  &__img {
+    margin-bottom: 7px;
+    border-radius: 45px 45px 0px 0px;
+  }
+
+  &__wrap {
+    @include lineSpaceBetween;
+  }
+  &__title-cart {
+    color: $colorForHeader;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+    margin-bottom: 17px;
+    width: 84.9%;
+  }
+  &__text-cart {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
+  &__svg {
+    width: 52px;
+    height: 52px;
+  }
+  &__extra-content {
+    background-color: $colorMainBackground;
+    padding: 8px;
+    position: absolute;
+    z-index: 10;
+    border-radius: 8px 8px 8px 0px;
+    top: 253px;
+    left: 41px;
+  }
+  &__extra-text {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
+}
+
+.section-post {
+  @include ColumnLeft(27px);
+  &__title {
+    color: $colorForHeader;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 62.5px */
+    letter-spacing: 1px;
+  }
+  &__container {
+    @include lineLeft(71px);
+    border-radius: 62px;
+    border: 1px solid $colorBorder;
+    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+    padding: 22px;
+  }
+  &__wrapper {
+    @include ColumnLeft(22px);
+  }
+  &__subtitle {
+    color: $colorForHeader;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+  }
+  &__text {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+  }
+  &__box {
+    @include lineSpaceBetween();
+  }
+  &__date {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
+  &__container:hover {
+    background-color: $colorBackCounter;
+  }
+  &__container:hover circle {
+    fill: $colorMainBackground;
+  }
+}
+
+.pages {
+  padding-top: 51px;
+  @include line(20px);
+  margin-bottom: 100px;
+  &__page {
+    color: $colorForHeader;
+    font-family: $fontFamilyAdditional;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    text-transform: capitalize;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $colorDigit;
+    border-radius: 60%;
+    @include lineCenter(0);
+  }
+  &__page:hover {
+    background-color: $colorAdditionalBackground;
+    border: none;
+  }
+  &__page:hover circle {
+    fill: $colorMainBackground;
+  }
+}

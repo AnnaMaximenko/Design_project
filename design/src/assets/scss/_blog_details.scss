@@ -1,0 +1,165 @@
+.banner__details {
+  background-image: url(@/assets/img/banner_details.jpg);
+  background-position: 50% 50%;
+  height: 351px;
+  margin-top: 30px;
+}
+
+.article {
+  @include lineSpaceBetweenUp;
+  padding-top: 200px;
+  margin-bottom: 96px;
+  &__ul {
+    width: 66.5%;
+    @include ColumnLeft(30px);
+  }
+  &__title {
+    color: $colorForHeader;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 125%; /* 62.5px */
+    margin-bottom: 12px;
+  }
+  &__img {
+    border-radius: 50px;
+  }
+  &__img-big {
+    margin-bottom: 46px;
+    height: 539px;
+    width: 100%;
+  }
+  &__img_small {
+    margin-bottom: 35px;
+    height: 365px;
+    width: 100%;
+  }
+
+  &__inner {
+    @include lineSpaceBetween;
+    margin-bottom: 48px;
+  }
+  &__date {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
+  &__breadcrumps {
+    @include lineSpaceBetween;
+  }
+  &__link {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
+  &__link:hover {
+    color: $colorForHeaderHover;
+  }
+  &__breadcrump {
+    @include line(20px);
+  }
+  &__breadcrump:not(:last-child) ::after {
+    content: "/";
+    padding: 8px;
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
+  &__text {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+    margin-bottom: 46px;
+  }
+
+  &__block {
+    @include ColumnCenter(0);
+    justify-content: center;
+    height: 267px;
+    background-color: $colorBackCounter;
+    border-radius: 50px;
+    margin-bottom: 27px;
+  }
+  &__symbol {
+    color: $colorDigit;
+    font-size: 200px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 125%; /* 250px */
+    letter-spacing: 4px;
+  }
+  &__text_big {
+    color: $colorDigit;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+  }
+  &__ol {
+    counter-reset: my-counter;
+  }
+  &__list_number ::before {
+    content: counter(my-counter);
+    counter-increment: my-counter;
+    color: $colorDigit;
+    margin-right: 0.5em;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+    letter-spacing: 0.4px;
+  }
+
+  &__button-box {
+    width: 30%;
+  }
+  &__button-title {
+    color: $colorForHeader;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+  }
+  &__button-wrapper {
+    @include lineLeft(10px);
+    flex-wrap: wrap;
+  }
+  &__button {
+    padding: 9px 30px;
+    color: $colorTextButton;
+    text-align: center;
+    font-family: $fontFamilyAdditional;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 22.5px */
+    letter-spacing: 0.36px;
+    border-radius: 10px;
+    border: none;
+    background-color: $colorBackCounter;
+  }
+  &__button_active {
+    color: $colorMainBackground;
+    background-color: $colorForHeader;
+  }
+}

@@ -1,0 +1,31 @@
+@import "vars";
+@import "mixin";
+@import "header-footer";
+@import "main-page";
+@import "articles&news";
+@import "banner";
+@import "blog_details";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamilyMain;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  list-style-type: none;
+}
+html {
+  font-size: $fontSizeMain;
+}
+
+.center {
+  padding-left: calc(50% - $siteWidth / 2);
+  padding-right: calc(50% - $siteWidth / 2);
+}

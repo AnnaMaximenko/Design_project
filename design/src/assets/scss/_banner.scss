@@ -1,0 +1,34 @@
+.banner {
+  margin-top: 43px;
+  &__article {
+    background-image: url(@/assets/img/article&news_banner.jpg);
+    background-position: 50% 50%;
+  }
+  @include lineCenter(0);
+  padding-top: 170px;
+  margin-bottom: 200px;
+  &__wrapper {
+    border-radius: 37px 37px 0px 0px;
+    background: $colorMainBackground;
+    background-position: center;
+    background-size: cover;
+    padding: 41px 78px;
+    @include ColumnCenter(0);
+  }
+  &__title {
+    color: $colorForHeader;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 62.5px */
+  }
+  &__text {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+  }
+}
