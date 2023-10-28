@@ -14,6 +14,9 @@
     background-size: cover;
     padding: 41px 78px;
     @include ColumnCenter(0);
+    &_project {
+      background-image: url(@/assets/img/project_banner.jpg);
+    }
   }
   &__title {
     color: $colorForHeader;

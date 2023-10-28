@@ -1,0 +1,106 @@
+@import "vars";
+@import "mixin";
+
+.categories {
+  margin-bottom: 40px;
+  @include lineCenter(0);
+  &__wrapper {
+    border-radius: 18px;
+    border: 1px solid $colorDigit;
+    @include lineSpaceAround(0);
+  }
+  &__name {
+    color: $colorForHeader;
+    text-align: center;
+    font-family: $fontFamilyAdditional;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 22.5px */
+    letter-spacing: 0.36px;
+    cursor: pointer;
+    padding: 26px 65px;
+    border-radius: 18px;
+  }
+  &__name_active {
+    background-color: $colorDigit;
+    color: $colorMainBackground;
+  }
+}
+.project {
+  margin-bottom: 61px;
+  &__ul {
+    columns: 2;
+    column-gap: 10px;
+  }
+  &__button_star {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    cursor: pointer;
+  }
+
+  &__li {
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    position: relative;
+  }
+
+  #active {
+    display: none;
+  }
+  #notactive {
+    stroke: black;
+    stroke-width: 2;
+  }
+
+  #active:checked + svg #notActive {
+    fill: #ffa928;
+  }
+
+  &__img {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  &__block {
+    @include lineSpaceBetween();
+  }
+
+  &__title {
+    color: $colorForHeader;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+  }
+  &__wrapper {
+    @include ColumnLeft(5px);
+  }
+  &__wrapper-link {
+    @include lineLeft(8px);
+  }
+
+  &__a {
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+  }
+  &__a:not(:last-child)::after {
+    content: "/";
+    padding-left: 8px;
+    color: $colorMainText;
+    font-family: $fontFamilyAdditional;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
+}
