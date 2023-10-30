@@ -3,10 +3,19 @@
   &__article {
     background-image: url(@/assets/img/article&news_banner.jpg);
     background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__project-details {
+    background-image: url(@/assets/img/projectDetails_banner.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   @include lineCenter(0);
   padding-top: 170px;
   margin-bottom: 200px;
+  height: 354px;
   &__wrapper {
     border-radius: 37px 37px 0px 0px;
     background: $colorMainBackground;
