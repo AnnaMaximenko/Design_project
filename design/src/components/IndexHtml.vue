@@ -9,7 +9,12 @@
         There are many variations of&nbsp; the passages of&nbsp;<br />lorem
         Ipsum fromavailable, majority.
       </p>
-      <a href="#" class="section-1__button">
+      <router-link
+        v-for="link in Arr"
+        :key="link.id"
+        :to="link.url"
+        class="section-1__button"
+      >
         <p class="section-1__btn-text">Get Started</p>
         <svg
           width="18"
@@ -26,7 +31,7 @@
             stroke-linejoin="round"
           />
         </svg>
-      </a>
+      </router-link>
     </div>
   </section>
   <section class="section-2 center">
@@ -37,121 +42,35 @@
       lookings at&nbsp;its layouts points.
     </p>
     <ul class="section-2__container">
-      <li class="section-2__cart">
-        <img
-          class="section-2__img"
-          src="@/assets/img/section2_img1.jpg"
-          alt="kitchen"
-        />
-        <div class="section-2__wrapper">
-          <div class="section-2__container-cart">
-            <h4 class="section-2__subtitle">Modern Kitchan</h4>
-            <p class="section-2__text-cart">Decor&nbsp;/ Artchitecture</p>
-          </div>
-          <svg
-            width="70"
-            height="70"
-            viewBox="0 0 70 70"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-            <path
-              d="M32 44L40 35L32 26"
-              stroke="#292F36"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-      </li>
-      <li class="section-2__cart">
-        <img
-          class="section-2__img"
-          src="@/assets/img/section2_img2.jpg"
-          alt="kitchen"
-        />
-        <div class="section-2__wrapper">
-          <div class="section-2__container-cart">
-            <h4 class="section-2__subtitle">Modern Kitchan</h4>
-            <p class="section-2__text-cart">Decor&nbsp;/ Artchitecture</p>
-          </div>
-          <svg
-            width="70"
-            height="70"
-            viewBox="0 0 70 70"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-            <path
-              d="M32 44L40 35L32 26"
-              stroke="#292F36"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-      </li>
-      <li class="section-2__cart">
-        <img
-          class="section-2__img"
-          src="@/assets/img/section2_img3.jpg"
-          alt="kitchen"
-        />
-        <div class="section-2__wrapper">
-          <div class="section-2__container-cart">
-            <h4 class="section-2__subtitle">Modern Kitchan</h4>
-            <p class="section-2__text-cart">Decor&nbsp;/ Artchitecture</p>
-          </div>
-          <svg
-            width="70"
-            height="70"
-            viewBox="0 0 70 70"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-            <path
-              d="M32 44L40 35L32 26"
-              stroke="#292F36"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-      </li>
-      <li class="section-2__cart">
-        <img
-          class="section-2__img"
-          src="@/assets/img/section2_img4.jpg"
-          alt="kitchen"
-        />
-        <div class="section-2__wrapper">
-          <div class="section-2__container-cart">
-            <h4 class="section-2__subtitle">Modern Kitchan</h4>
-            <p class="section-2__text-cart">Decor&nbsp;/ Artchitecture</p>
-          </div>
-          <svg
-            width="70"
-            height="70"
-            viewBox="0 0 70 70"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-            <path
-              d="M32 44L40 35L32 26"
-              stroke="#292F36"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
+      <li
+        class="section-2__cart"
+        v-for="(item, index) in ourProjects"
+        :key="index"
+      >
+        <router-link :to="item.url">
+          <img class="section-2__img" :src="item.img" alt="kitchen" />
+          <div class="section-2__wrapper">
+            <div class="section-2__container-cart">
+              <h4 class="section-2__subtitle">{{ item.title }}</h4>
+              <p class="section-2__text-cart">Decor&nbsp;/ Artchitecture</p>
+            </div>
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
+              <path
+                d="M32 44L40 35L32 26"
+                stroke="#292F36"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg></div
+        ></router-link>
       </li>
     </ul>
   </section>
@@ -184,14 +103,15 @@
     <ul class="articleAndNews__container" id="app">
       <li
         class="articleAndNews__cart"
-        v-for="(cart, index) in data"
+        v-for="(cart, index) in dataArr"
         :key="index"
       >
         <img :src="cart.img" alt="kitchen" class="articleAndNews__img" />
         <h4 class="articleAndNews__title-cart">{{ cart.title }}</h4>
         <div class="articleAndNews__wrap">
           <p class="articleAndNews__text-cart">{{ cart.text }}</p>
-          <a href="#" class="articleAndNews__link">
+
+          <router-link :to="cart.url" class="articleAndNews__link">
             <svg
               class="articleAndNews__svg"
               width="70"
@@ -209,7 +129,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
         <div class="articleAndNews__extra-content">
           <p class="articleAndNews__extra-text">{{ cart.extra_text }}</p>
@@ -220,34 +140,62 @@
 </template>
 
 <script>
-const App = {
+export default {
   data() {
     return {
-      data: [
+      dataArr: [
         {
-          img: "@/assets/img/articles_img1.jpg",
+          img: require("@/assets/img/articles_img1.jpg"),
           title: "Let’s Get Solution For Building Construction Work",
           text: "26 December,2022",
           extra_text: "Kitchan Design",
+          url: "/article_and_news",
         },
         {
-          img: "@/assets/img/articles_img2.png",
+          img: require("@/assets/img/articles_img2.png"),
           title: "Low Cost Latest Invented Interior Designing Ideas.",
           text: "22 December,2022",
           extra_text: "Living Design",
+          url: "/article_and_news",
         },
         {
-          img: "@/assets/img/articles_img3.png",
+          img: require("@/assets/img/articles_img3.png"),
           title: "Best For Any Office & Business Interior Solutions",
           text: "25 December,2022",
           extra_text: "Interior Design",
+          url: "/article_and_news",
         },
       ],
+      ourProjects: [
+        {
+          id: 0,
+          title: "Modern Kitchan",
+          img: require("@/assets/img/section2_img1.jpg"),
+          url: "/project",
+        },
+        {
+          id: 1,
+          title: "Modern Kitchan",
+          img: require("@/assets/img/section2_img2.jpg"),
+          url: "/project",
+        },
+        {
+          id: 2,
+          title: "Modern Kitchan",
+          img: require("@/assets/img/section2_img3.jpg"),
+          url: "/project",
+        },
+        {
+          id: 3,
+          title: "Modern Kitchan",
+          img: require("@/assets/img/section2_img4.jpg"),
+          url: "/project",
+        },
+      ],
+      Arr: [{ id: 0, name: "Project", url: "/project" }],
     };
   },
-  methods: {},
 };
-export default {};
 </script>
 
 <style lang="scss" scoped></style>

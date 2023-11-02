@@ -1,9 +1,7 @@
 <template>
-  <Header />
-  <IndexHtml />
-  <Footer />
-  <Header />
-  <ArticleAndNews />
+  <router-view />
+
+  <!-- 
   <Header />
   <BlogDetails />
   <Footer />
@@ -12,27 +10,26 @@
   <Footer />
   <Header />
   <ProjectDetails />
-  <Footer />
+  <Footer /> -->
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import IndexHtml from "./components/IndexHtml.vue";
-import Footer from "./components/Footer.vue";
-import ArticleAndNews from "./components/ArticleAndNews.vue";
-import BlogDetails from "./components/BlogDetails.vue";
-import Project from "./components/Project.vue";
-import ProjectDetails from "./components/ProjectDetails.vue";
+// import Header from "./components/Header.vue";
+// import IndexHtml from "./components/IndexHtml.vue";import Footer from "./components/Footer.vue";
+// import ArticleAndNews from "./components/ArticleAndNews.vue";
+// import BlogDetails from "./components/BlogDetails.vue";
+// import Project from "./components/Project.vue";
+// import ProjectDetails from "./components/ProjectDetails.vue";
 
 export default {
   components: {
-    Header,
-    IndexHtml,
-    Footer,
-    ArticleAndNews,
-    BlogDetails,
-    Project,
-    ProjectDetails,
+    // Header,
+    // IndexHtml,
+    // Footer,
+    // ArticleAndNews,
+    // BlogDetails,
+    // Project,
+    // ProjectDetails,
   },
 };
 </script>

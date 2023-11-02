@@ -28,7 +28,7 @@
         v-for="(article, index) in activeArticle"
         :key="index"
       >
-        <a href="#" class="project-link">
+        <router-link :to="article.url" class="project-link">
           <img :src="article.img" :alt="article.title" class="project__img" />
           <div class="project__block">
             <div class="project__wrapper">
@@ -55,7 +55,7 @@
               />
             </svg>
           </div>
-        </a>
+        </router-link>
 
         <label class="project__button_star">
           <input type="checkbox" id="active" />
@@ -165,6 +165,7 @@ export default {
           img: require("@/assets/img/project_badroom-1.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -172,6 +173,7 @@ export default {
           img: require("@/assets/img/project_badroom-2.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -179,6 +181,7 @@ export default {
           img: require("@/assets/img/project_badroom-3.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -186,6 +189,7 @@ export default {
           img: require("@/assets/img/project_badroom-4.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -193,6 +197,7 @@ export default {
           img: require("@/assets/img/project_badroom-5.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -200,6 +205,7 @@ export default {
           img: require("@/assets/img/project_badroom-6.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -207,6 +213,7 @@ export default {
           img: require("@/assets/img/project_badroom-7.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -214,6 +221,7 @@ export default {
           img: require("@/assets/img/project_badroom-8.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
 
         {
@@ -222,6 +230,7 @@ export default {
           title: "Modern Bathroom",
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bathroom",
@@ -229,6 +238,7 @@ export default {
           img: require("@/assets/img/project_bathroom-2.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bathroom",
@@ -236,6 +246,7 @@ export default {
           img: require("@/assets/img/project_bathroom-4.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bathroom",
@@ -243,6 +254,7 @@ export default {
           img: require("@/assets/img/project_bathroom-3.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bathroom",
@@ -250,6 +262,7 @@ export default {
           title: "Modern Bathroom",
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bathroom",
@@ -257,6 +270,7 @@ export default {
           img: require("@/assets/img/project_bathroom-4.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bathroom",
@@ -264,6 +278,7 @@ export default {
           img: require("@/assets/img/project_bathroom-3.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bathroom",
@@ -271,6 +286,7 @@ export default {
           img: require("@/assets/img/project_bathroom-1.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
 
         {
@@ -279,6 +295,7 @@ export default {
           img: require("@/assets/img/project_kitchan-1.jpeg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "kitchan",
@@ -286,6 +303,7 @@ export default {
           img: require("@/assets/img/project_kitchan-3.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "kitchan",
@@ -293,6 +311,7 @@ export default {
           img: require("@/assets/img/project_kitchan-2.jpeg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "kitchan",
@@ -300,6 +319,7 @@ export default {
           img: require("@/assets/img/project_kitchan-4.jpeg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "kitchan",
@@ -307,6 +327,7 @@ export default {
           img: require("@/assets/img/project_kitchan-3.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "kitchan",
@@ -314,6 +335,7 @@ export default {
           img: require("@/assets/img/project_kitchan-2.jpeg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
 
         {
@@ -322,6 +344,7 @@ export default {
           img: require("@/assets/img/project_kitchan-4.jpeg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "kitchan",
@@ -329,6 +352,7 @@ export default {
           img: require("@/assets/img/project_kitchan-1.jpeg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
 
         {
@@ -337,6 +361,7 @@ export default {
           img: require("@/assets/img/project_leave-1.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "livingArea",
@@ -344,6 +369,7 @@ export default {
           img: require("@/assets/img/project_leave-3.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "livingArea",
@@ -351,6 +377,7 @@ export default {
           img: require("@/assets/img/project_leave-2.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "livingArea",
@@ -358,6 +385,7 @@ export default {
           img: require("@/assets/img/project_leave-4.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "livingArea",
@@ -365,6 +393,7 @@ export default {
           img: require("@/assets/img/project_leave-3.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "livingArea",
@@ -372,6 +401,7 @@ export default {
           img: require("@/assets/img/project_leave-1.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "livingArea",
@@ -379,6 +409,7 @@ export default {
           img: require("@/assets/img/project_leave-4.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "livingArea",
@@ -386,6 +417,7 @@ export default {
           img: require("@/assets/img/project_leave-2.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
       ],
 
@@ -396,6 +428,7 @@ export default {
           img: require("@/assets/img/project_badroom-1.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -403,6 +436,7 @@ export default {
           img: require("@/assets/img/project_badroom-2.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -410,6 +444,7 @@ export default {
           img: require("@/assets/img/project_badroom-3.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -417,6 +452,7 @@ export default {
           img: require("@/assets/img/project_badroom-4.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -424,6 +460,7 @@ export default {
           img: require("@/assets/img/project_badroom-5.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -431,6 +468,7 @@ export default {
           img: require("@/assets/img/project_badroom-6.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -438,6 +476,7 @@ export default {
           img: require("@/assets/img/project_badroom-7.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
         {
           id: "bedroom",
@@ -445,6 +484,7 @@ export default {
           img: require("@/assets/img/project_badroom-8.jpg"),
           linkLeft: "Decor",
           linkRight: "Artchitecture",
+          url: "/project_details",
         },
       ],
       buttonIsActive: "bedroom",

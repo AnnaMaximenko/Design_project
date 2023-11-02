@@ -49,9 +49,19 @@
     </div>
     <nav class="footer-middle footer__item">
       <h3 class="footer-middle__title">Pages</h3>
-      <a href="#" class="footer-middle__menu">Home</a>
+
+      <!-- <a href="#" class="footer-middle__menu">Home</a>
       <a href="#" class="footer-middle__menu">Project</a>
-      <a href="#" class="footer-middle__menu">Blog</a>
+      <a href="#" class="footer-middle__menu">Blog</a> -->
+
+      <router-link
+        class="footer-middle__menu"
+        v-for="link in Arr"
+        :key="link.id"
+        :to="link.url"
+      >
+        {{ link.name }}
+      </router-link>
     </nav>
     <div class="footer-right footer__item">
       <h3 class="footer-right__title">Contact</h3>
@@ -65,7 +75,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      Arr: [
+        { id: 0, name: "Home", url: "/" },
+        { id: 1, name: "Project", url: "/project" },
+        { id: 2, name: "Blog", url: "/blog_details" },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>

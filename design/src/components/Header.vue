@@ -1,8 +1,13 @@
 <template>
   <header class="header center">
     <div class="header-left">
-      <a class="header-left__logo" href="index.html"
-        ><svg
+      <router-link
+        class="header-left__logo"
+        v-for="link in leftArr"
+        :key="link.id"
+        :to="link.url"
+      >
+        <svg
           width="34"
           height="34"
           viewBox="0 0 34 34"
@@ -14,19 +19,48 @@
             fill="#CDA274"
           />
         </svg>
-      </a>
-      <a class="header-left__text" href="index.html">Interno</a>
+      </router-link>
+
+      <router-link
+        class="header-left__text"
+        v-for="link in leftArr"
+        :key="link.id"
+        :to="link.url"
+        >Interno</router-link
+      >
     </div>
     <nav class="header-right">
-      <a class="header-right__menu" href="#">Home</a>
-      <a class="header-right__menu" href="#">Project</a>
-      <a class="header-right__menu" href="#">Blog</a>
+      <router-link
+        class="header-right__menu"
+        v-for="link in rightArr"
+        :key="link.id"
+        :to="link.url"
+      >
+        {{ link.name }}
+      </router-link>
     </nav>
   </header>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      leftArr: [
+        {
+          id: 0,
+          url: "/",
+        },
+      ],
+
+      rightArr: [
+        { id: 0, name: "Home", url: "/" },
+        { id: 1, name: "Project", url: "/project" },
+        { id: 2, name: "Blog", url: "/blog_details" },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
